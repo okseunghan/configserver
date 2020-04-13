@@ -184,6 +184,16 @@ hone:
           maxIdle: 0
           testOnBorrow: true
         transactionManagerName: sessionRepositoryTransactionManager
+        jpa:
+            enabled: true
+            entityManagerFactoryRef: entityManagerFactory
+            basePackages: hlicp
+            properties:
+                hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
+                hibernate-hbm2ddl-auto: create       
+                hibernate-show_sql: false 
+                javax-persistence-query-timeout: 3000
+                hibernate-id-new_generator_mappings: false               
       - key: exmDS01
         #type : 'jndi', 'tomcat', 'hikari'  default-> 'tomcat'
         dataSourceType: tomcat
@@ -204,6 +214,16 @@ hone:
           maxIdle: 0
           testOnBorrow: true
         transactionManagerName: codeTransactionManager
+        jpa:
+            enabled: true
+            entityManagerFactoryRef: entityManagerFactory2
+            basePackages: hlicp
+            properties:
+                hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
+                hibernate-hbm2ddl-auto: create       
+                hibernate-show_sql: false 
+                javax-persistence-query-timeout: 3000
+                hibernate-id-new_generator_mappings: false               
       - key: honeDataSource
         driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
         #driverClassName: oracle.jdbc.driver.OracleDriver
