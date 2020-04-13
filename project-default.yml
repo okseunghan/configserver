@@ -180,7 +180,7 @@ hone:
         mapperConfigLocation: classpath:honeconfig/mybatis/configuration.xml
         transactionManagerName: sessionRepositoryTransactionManager
         pool:
-          maxPoolSize: 6
+          maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
           testOnBorrow: true
@@ -200,7 +200,7 @@ hone:
         mapperConfigLocation: classpath:honeconfig/mybatis/configuration.xml
         transactionManagerName: codeTransactionManager
         pool:
-          maxPoolSize: 6
+          maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
           testOnBorrow: true
@@ -214,7 +214,7 @@ hone:
         password: ENC(UG9SUeQHb+rRwkJR/aSiGDQ3NwNIYucTSJozQPglvI4=)
         transactionManagerName: honeTransactionManager
         pool:
-          maxPoolSize: 6
+          maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
       #시스템 연계 및 spring-integration 설정 
