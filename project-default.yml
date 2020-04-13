@@ -178,12 +178,12 @@ hone:
         mybatisEnabled: true
         mapperLocations: classpath*:hlicp/**/mappers/*.xml
         mapperConfigLocation: classpath:honeconfig/mybatis/configuration.xml
-        transactionManagerName: sessionRepositoryTransactionManager
         pool:
           maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
           testOnBorrow: true
+        transactionManagerName: sessionRepositoryTransactionManager
       - key: exmDS01
         #type : 'jndi', 'tomcat', 'hikari'  default-> 'tomcat'
         dataSourceType: tomcat
@@ -198,12 +198,12 @@ hone:
         mybatisEnabled: true
         mapperLocations: classpath*:hlicp/**/mappers/*.xml
         mapperConfigLocation: classpath:honeconfig/mybatis/configuration.xml
-        transactionManagerName: codeTransactionManager
         pool:
           maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
           testOnBorrow: true
+        transactionManagerName: codeTransactionManager
       - key: honeDataSource
         driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
         #driverClassName: oracle.jdbc.driver.OracleDriver
@@ -212,11 +212,11 @@ hone:
         url: jdbc:log4jdbc:oracle:thin:@127.0.0.1:59161:xe
         username: hone4
         password: ENC(UG9SUeQHb+rRwkJR/aSiGDQ3NwNIYucTSJozQPglvI4=)
-        transactionManagerName: honeTransactionManager
         pool:
           maxPoolSize: "6"
           maxActive: 3
           maxIdle: 0
+        transactionManagerName: honeTransactionManager
       #시스템 연계 및 spring-integration 설정 
     integration:
         inbound-gateway.additional-path: /hlicp/{appCode}/{serviceId}    
