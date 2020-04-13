@@ -1,6 +1,6 @@
-#------spring boot ¿¡¼­ ÁöÁ¤ÇÑ properties -----
+#------spring boot ì—ì„œ ì§€ì •í•œ properties -----
 #server.error.whitelabel.enabled: false
-#security °ü·Ã 
+#security ê´€ë ¨ 
 #security.basic.enabled: false
 #spring:
 #  session:
@@ -68,7 +68,7 @@ management:
             exposure:
                 include: "*"
 
-#------spring boot ¿¡¼­ ÁöÁ¤ÇÑ properties -----
+#------spring boot ì—ì„œ ì§€ì •í•œ properties -----
 logback.dbappender.username: hone4
 logback.dbappender.password: ENC(UG9SUeQHb+rRwkJR/aSiGDQ3NwNIYucTSJozQPglvI4=)       
 logback.dbappender.url: jdbc:oracle:thin:@127.0.0.1:59161:xe
@@ -109,7 +109,7 @@ hone:
         base-package: hlicp
     web:
         base-package: hlicp.**.web
-        #web.xml »ç¿ë¸ğµå default : false
+        #web.xml ì‚¬ìš©ëª¨ë“œ default : false
         use-webxml.enabled: false
             
     systemheader:
@@ -136,7 +136,7 @@ hone:
 #        hqml:
 #            reloadable: true
 #            columnNameConvertor.classname: hone.bom.dao.column.ColumnNameCamelizer
-    #ÆÄÀÏÀúÀå°æ·Î => {base-path}/{policy-path}/yyyy/mm/dd/UUID.È®ÀåÀÚ¿Í °°ÀÌ »ı¼º 
+    #íŒŒì¼ì €ì¥ê²½ë¡œ => {base-path}/{policy-path}/yyyy/mm/dd/UUID.í™•ì¥ìì™€ ê°™ì´ ìƒì„± 
     files:
       base-path:  C:\UPLOAD
       temp-path:  C:\UPLOAD
@@ -156,7 +156,7 @@ hone:
         atomikosProperty: 
           com-atomikos-icatch-log_base_dir: C:\UPLOAD
     datasource-map:
-        #policy 'default' : bean ÀÌ¸§ÀÌ dataSource¸¦ Ã£À½, 'package': ÆĞÅ°Áö·Î ¸ÅÇÎµÈ ds¸¦ Ã£À½ 
+        #policy 'default' : bean ì´ë¦„ì´ dataSourceë¥¼ ì°¾ìŒ, 'package': íŒ¨í‚¤ì§€ë¡œ ë§¤í•‘ëœ dsë¥¼ ì°¾ìŒ 
         policy: package
         packages:
             hlicp.exm: exmDS  
@@ -166,6 +166,16 @@ hone:
       - key: exmDS
         #type : 'jndi', 'tomcat', 'hikari'  default-> 'tomcat'
         dataSourceType: tomcat
+        jpa:
+            enabled: true
+            entityManagerFactoryRef: entityManagerFactory
+            basePackages: hlicp
+            properties:
+                hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
+                hibernate-hbm2ddl-auto: create       
+                hibernate-show_sql: false 
+                javax-persistence-query-timeout: 3000
+                hibernate-id-new_generator_mappings: false
         driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
         #driverClassName: oracle.jdbc.driver.OracleDriver
         #driverClassName: oracle.jdbc.xa.client.OracleXADataSource
@@ -187,6 +197,16 @@ hone:
       - key: exmDS01
         #type : 'jndi', 'tomcat', 'hikari'  default-> 'tomcat'
         dataSourceType: tomcat
+        jpa:
+            enabled: true
+            entityManagerFactoryRef: entityManagerFactory2
+            basePackages: hlicp
+            properties:
+                hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
+                hibernate-show_sql: false 
+                javax-persistence-query-timeout: 3000
+                hibernate-id-new_generator_mappings: false
+                aaa: test
         driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
         #driverClassName: oracle.jdbc.driver.OracleDriver
         #driverClassName: oracle.jdbc.xa.client.OracleXADataSource
@@ -217,7 +237,7 @@ hone:
           maxPoolSize: 6
           maxActive: 3
           maxIdle: 0
-      #½Ã½ºÅÛ ¿¬°è ¹× spring-integration ¼³Á¤ 
+      #ì‹œìŠ¤í…œ ì—°ê³„ ë° spring-integration ì„¤ì • 
     integration:
         inbound-gateway.additional-path: /hlicp/{appCode}/{serviceId}    
         eai:
@@ -250,13 +270,13 @@ com:
     icatch: 
       log_base_dir: C:\UPLOAD    
 
-#ºñÁî´Ï½º 
+#ë¹„ì¦ˆë‹ˆìŠ¤ 
 hlicp:
     jpl:
         test: kkkk
         test2: ssss
 
-#======°øÅë Ç×¸ñ E=========
+#======ê³µí†µ í•­ëª© E=========
 
 ---
 spring.profiles: dev
