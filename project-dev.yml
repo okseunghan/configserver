@@ -1,4 +1,2 @@
-test:
-  data1: data-dev1
-  
-msg: devmsg is   
+project:
+  profiles: c

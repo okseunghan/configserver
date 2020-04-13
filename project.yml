@@ -1,2 +1,3 @@
-test:
-  data1: data1
+project:
+  profiles: default
+  project1: basic data
