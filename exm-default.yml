@@ -172,7 +172,7 @@ hone:
             basePackages: hlicp
             properties:
                 hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
-#                hibernate-hbm2ddl-auto: create       
+                hibernate-hbm2ddl-auto: create       
                 hibernate-show_sql: false 
                 javax-persistence-query-timeout: 3000
                 hibernate-id-new_generator_mappings: false
@@ -203,7 +203,7 @@ hone:
             basePackages: hlicp
             properties:
                 hibernate-dialect: org.hibernate.dialect.Oracle12cDialect        
-#                hibernate-hbm2ddl-auto: create       
+                hibernate-hbm2ddl-auto: create       
                 hibernate-show_sql: false 
                 javax-persistence-query-timeout: 3000
                 hibernate-id-new_generator_mappings: false
