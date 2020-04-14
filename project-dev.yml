@@ -1,12 +1,10 @@
-
-
 test:
-  dev: °³¹ßÀÔ´Ï´Ù
+  dev: ê°œë°œì…ë‹ˆë‹¤
   list:
-    - data1
-    - data2ÀÌ°Ç °³¹ß
+    - data1ì´ê±´ ê°œë°œ
+    - data2
   map: 
     key1: key1Value
-    key2: key2ValueÀÌ°Ç °³¹ß
+    key2: key2Valueì´ê±´ ê°œë°œ
     key3: key3ValueDEV
     key4: key4Value
