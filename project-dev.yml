@@ -1,2 +1,12 @@
-project:
-  profiles: c
+
+
+test:
+  dev: 개발입니다
+  list:
+    - data1
+    - data2이건 개발
+  map: 
+    key1: key1Value
+    key2: key2Value이건 개발
+    key3: key3ValueDEV
+    key4: key4Value

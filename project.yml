@@ -1,3 +1,12 @@
-project:
-  profiles: default
-  project1: basic data
+
+
+test:
+  dev: 로컬입니다
+  list:
+    - data1이건 로컬
+    - data2
+  map: 
+    key1: key1Value
+    key2: key2Value이건 로컬
+    key3: key3ValueLocal
+    key4: key4Value
