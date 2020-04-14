@@ -6,6 +6,5 @@ project:
 ---
 spring.profiles: default
 project:
-  profiles: dev profiles
-  project2: default data  
+  profiles: dev profiles  
   project3: dev added
