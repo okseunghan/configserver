@@ -1,3 +1,11 @@
 project:
-  profiles: default
+  profiles: default profiles
   project2: default data
+  
+  
+---
+spring.profiles: dev
+project:
+  profiles: dev profiles
+  project2: default data  
+  project3: dev added
