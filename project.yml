@@ -7,7 +7,7 @@ test:
     - data2 이건 로컬
   list2:
     - data1이건 로컬
-    - data2
+    - data2 이건 로컬
     - data2 이건 로컬이 가장 많음
   list3:
     - data1이건 로컬
