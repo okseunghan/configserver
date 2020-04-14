@@ -4,7 +4,7 @@ project:
   
   
 ---
-spring.profiles: dev
+spring.profiles: default
 project:
   profiles: dev profiles
   project2: default data  
