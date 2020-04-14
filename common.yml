@@ -2,7 +2,7 @@ test:
   dev: 공통입니다
   list1:
     - data1이건 공통
-    - data2
+    - data2 이건 공통
     - 1은 공통이 더 많음
   list2:
     - data2이건 공통

@@ -4,7 +4,7 @@ test:
   dev: 로컬입니다
   list1:
     - data1이건 로컬
-    - data2
+    - data2 이건 로컬
   list2:
     - data1이건 로컬
     - data2
