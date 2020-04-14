@@ -344,7 +344,7 @@ spring.profiles: stg
 spring.profiles: prd
 hone:
     datasources:
-      - key: dataSource
+      - key: dataSourcePRD
         #type : 'jndi', 'tomcat', 'hikari'  default-> 'tomcat'
         dataSourceType: jndi
         jpaEnabled: true
